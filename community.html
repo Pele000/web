@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Street Dance Community</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="community.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">StreetDance</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="teaching.html">Resources</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+      <section class="hero">
+        <h1>Street Dance Community</h1>
+        <p>Connect. Share. Inspire.</p>
+      </section>
+
+      <section class="section section-dark fade-in" id="weekly-tasks">
+        <h2 class="section-title"><i class="bx bx-calendar-event"></i> This week's tasks</h2>
+        <p class="section-description">Complete this week's tasks and keep improving your street dance!</p>
+        <div class="task-list" id="taskList"></div>
+      </section>
+
+      <!-- 🔹 舞者投稿影片展示 -->
+      <section class="section section-dark fade-in">
+        <h2 class="section-title"><i class="bx bx-video"></i> Dancer submissions</h2>
+        <p class="section-description">Selected dance practice, competition, and teaching videos, showing diverse styles and personal charm:</p>
+        <div class="video-showcase">
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/8XGQGhli0IY" title="Practice Video" allowfullscreen></iframe>
+            <p class="video-caption">👟 Hiphop Freestyle by 小剛</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/0kL6nhutjQ8" title="Battle Reflection" allowfullscreen></iframe>
+            <p class="video-caption">⚡ Breaking Battle by Chi</p>
+          </div>
+        </div>
+
+      </section>
+        <section class="section section-dark fade-in">
+          <h2 class="section-title"><i class="bx bx-upload"></i> I want to contribute too!</h2>
+          <p>If you love street dance, you are welcome to share your practice videos, competition clips, or teaching content.</p>
+          <a class="cta-btn pulse" href="https://docs.google.com/forms/d/e/1FAIpQLScyKXMsX1Hs79NjxGGLE3w1H40PqcvKphsI_s2zTZjQmgkIWQ/viewform?usp=header" target="_blank">Click me to contribute</a>
+        </section>
+        <section class="section section-dark fade-in">
+          <h2 class="section-title"><i class="bx bx-question-mark"></i> Street Dance Q&amp;A</h2>
+          <div class="qa-list">
+            <div class="qa-item">
+              <button class="accordion-question">
+                <span class="question-text">How long does it take to improve?</span>
+                <span class="arrow">▲</span>
+              </button>
+              <div class="accordion-answer">
+                Practice 30 mins daily, imitate + freestyle = fast progress.
+              </div>
+            </div>
+            <div class="qa-item">
+              <button class="accordion-question">
+                <span class="question-text">Do I need to understand music to Freestyle?</span>
+                <span class="arrow">▼</span>
+              </button>
+              <div class="accordion-answer">
+                Yes! Musical understanding is the soul of freestyle, which can help you grasp the rhythm and make layered movements.
+              </div>
+            </div>
+            <div class="qa-item">
+              <button class="accordion-question">
+                <span class="question-text">
+                  Which dance style should a beginner start learning?</span>
+                  <span class="arrow">▼</span>
+                </button>
+              <div class="accordion-answer">
+                Hiphop and Locking are good choices with clear rhythm and easy-to-learn movements. It will be smoother if you build up a sense of groove first!
+              </div>
+            </div>
+            <div class="qa-item">
+              <button class="accordion-question">
+                <span class="question-text">
+                Does Breaking require good somersault skills?</span>               
+                <span class="arrow">▼</span>
+            </button>
+              <div class="accordion-answer">
+                Not necessarily. Breaking is divided into footwork, freeze, toprock and so on. As long as you practice hard, you can gradually advance.
+              </div>
+            </div>
+            <div class="qa-item">
+              <button class="accordion-question">
+                <span class="question-text">
+                  Can I still dance hip-hop even if I don’t have a good sense of pitch? </span>
+                <span class="arrow">▼</span>
+              </button>
+              <div class="accordion-answer">
+                Yes! Street dance can help you train your sense of rhythm. You will improve if you listen to more music, imitate more, and practice more.
+              </div> 
+            </div>         
+            <div class="qa-item">
+              <button class="accordion-question">
+                <span class="question-text">How to record a good-looking dance video?</span>
+                <span class="arrow">▼</span>
+              </button>
+              <div class="accordion-answer">
+                Ambient lighting, stable camera position, and music rhythm editing make your dance more textured.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-dark fade-in">
+          <h2 class="section-title"><i class="bx bx-message-square-dots"></i> Message Wall</h2>
+          <form class="message-form" id="messageForm">
+            <textarea id="messageInput" rows="4" placeholder="Write down your dancing experience or words of encouragement..."></textarea>
+            <button type="submit">Submit</button>
+          </form>
+          <div class="message-box" id="messageBox"></div>
+         
+        </section>
+
+    </main>
+
+    <button id="backToTop">↑</button>
+
+    <footer>
+      <p>&copy; 2025 Street Dance Culture Platform</p>
+    </footer>
+  </div>
+
+  <!-- JS -->
+  <script>
+    const backToTopBtn = document.getElementById('backToTop');
+    window.onscroll = () => {
+      const scrolled = window.scrollY > 200;
+      document.querySelector('.navbar').classList.toggle('scrolled', scrolled);
+      backToTopBtn.style.display = scrolled ? 'block' : 'none';
+    };
+    backToTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const targets = document.querySelectorAll('.reveal-underline');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle('visible', entry.isIntersecting);
+        });
+      }, { threshold: 0.5 });
+      targets.forEach(target => observer.observe(target));
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      const targets = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.3 });
+      targets.forEach(target => observer.observe(target));
+    });
+    document.querySelectorAll('.accordion-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const thisAnswer = button.nextElementSibling;
+        const thisArrow = button.querySelector('.arrow');
+
+        // 先關閉其他開啟的
+        document.querySelectorAll('.accordion-answer').forEach(answer => {
+          if (answer !== thisAnswer) {
+            answer.style.maxHeight = null;
+            answer.classList.remove('open');
+          }
+        });
+        document.querySelectorAll('.arrow').forEach(arrow => {
+          if (arrow !== thisArrow) {
+            arrow.classList.remove('rotate');
+          }
+        });
+
+        // 切換目前這一個
+        if (thisAnswer.classList.contains('open')) {
+          thisAnswer.style.maxHeight = null;
+        } else {
+          thisAnswer.style.maxHeight = thisAnswer.scrollHeight + "px";
+        }
+
+        thisAnswer.classList.toggle('open');
+        thisArrow.classList.toggle('rotate');
+      });
+    });
+
+
+
+  // 多組每週任務（你可以自己擴充）
+  const weeklyTaskSets = [
+  [ // Week 0
+  { id: 'w0-task1', title: '📹 Freestyle', description: 'Upload a video and tag it with #StreetDance challenge. ' },
+  { id: 'w0-task2', title: '🎧 Music conversion practice', description: 'Freestyle with 3 different music. ' },
+  { id: 'w0-task3', title: '🧠 Imitation + creative adaptation', description: 'Imitate the dancers and add your own style. ' }
+  ],
+  [ // Week 1
+  { id: 'w1-task1', title: '📸 Record your strongest Freeze', description: 'Record a video to practice freeze and control. ' },
+  { id: 'w1-task2', title: '💬 Share your dance experience', description: 'Write down your recent dance experience in the community or notes. ' },
+  { id: 'w1-task3', title: '🎥 Watch classic street dance videos', description: 'Watch 2 world-class performances and write down the key points of observation. ' }
+  ],
+  [ // Week 2
+  { id: 'w2-task1', title: '🔥 Toprock practice challenge', description: 'Practice Toprock flow for at least 10 minutes every day. ' },
+  { id: 'w2-task2', title: '🧍‍♂️ Create a personal dance posture library', description: 'Record 5 of your favorite postures freeze. ' },
+  { id: 'w2-task3', title: '🎯 Participate in an online battle or workshop', description: 'See if you can break through the framework. ' }
+  ],
+  [ // Week 3
+  { id: 'w3-task1', title: '🧘‍♀️ Body control training', description: 'Try freestyle to 3 slow-tempo music to practice control and extension. ' },
+  { id: 'w3-task2', title: '📚 Learn about street dance culture', description: 'Watch videos or materials related to the origin of street dance to understand the spirit and history of HIPHOP. ' },
+  { id: 'w3-task3', title: '🗣️ Street dance recommendation task', description: 'Recommend your favorite dance style to 1 friend and share the video or introduction. ' }
+  ]
+  ];
+
+
+  // 用目前週數當索引
+  const currentWeek = new Date();
+  const weekNumber = Math.floor((currentWeek - new Date(currentWeek.getFullYear(), 0, 1)) / (7 * 24 * 60 * 60 * 1000));
+  const currentSet = weeklyTaskSets[weekNumber % weeklyTaskSets.length];
+
+  // 使用今天週數當作 localStorage key
+  const weekKey = 'streetdance-week-' + weekNumber;
+  let completed = JSON.parse(localStorage.getItem(weekKey)) || {};
+
+  const taskList = document.getElementById('taskList');
+  taskList.innerHTML = ''; // 清空舊的
+
+  currentSet.forEach(task => {
+    const card = document.createElement('div');
+    card.className = 'task-card';
+    if (completed[task.id]) card.classList.add('completed');
+
+    card.innerHTML = `
+      <h4>${task.title}</h4>
+      <p>${task.description}</p>
+      <span class="checkmark">✅</span>
+    `;
+
+    card.addEventListener('click', () => {
+      card.classList.toggle('completed');
+      completed[task.id] = card.classList.contains('completed');
+      localStorage.setItem(weekKey, JSON.stringify(completed));
+      checkAllTasksCompleted();
+      function showCompletionPopup() {
+        const popup = document.getElementById('taskCompletePopup');
+        popup.classList.add('show');
+        setTimeout(() => popup.classList.remove('show'), 3000); // 3秒後消失
+      }
+
+      function checkAllTasksCompleted() {
+        const allDone = currentSet.every(task => completed[task.id]);
+        if (allDone) showCompletionPopup();
+      }
+    });
+
+    taskList.appendChild(card);
+  });
+    const form = document.getElementById('messageForm');
+    const input = document.getElementById('messageInput');
+    const box = document.getElementById('messageBox');
+
+    // 初始化時載入留言
+    let messages = JSON.parse(localStorage.getItem('streetdanceMessages')) || [];
+    messages.forEach(msg => renderMessage(msg));
+
+    // 渲染留言
+    function renderMessage(text) {
+      const div = document.createElement('div');
+      div.innerHTML = `<p>${text}</p><hr>`;
+      box.prepend(div);
+    }
+
+    // 送出留言
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const value = input.value.trim();
+      if (value) {
+        messages.unshift(value); // 加到陣列前面
+        localStorage.setItem('streetdanceMessages', JSON.stringify(messages));
+        renderMessage(value);
+        input.value = '';
+      }
+    });
+
+
+  </script>
+
+  <div id="taskCompletePopup" class="popup-message">🎉 本週任務全數完成！</div>
+
+</body>
+</html>

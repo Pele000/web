@@ -1,0 +1,473 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, h3, p {
+  text-align: center;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+li {
+  margin-bottom: 12px;
+}
+/* ========== Navbar ========== */
+    .navbar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+    .navbar.scrolled {
+      background-color: #fff;
+    }
+    .navbar .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white;
+    }
+    .navbar.scrolled .logo,
+    .navbar.scrolled ul li a {
+      color: #111;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      padding-right: 3.5rem;
+      padding-top: 10px;
+      font-size: 1rem;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      font-weight: 600;
+      color: white;
+      transition: color 0.3s ease;
+      position: relative;
+
+    }
+    .navbar ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #ff4081;
+      bottom: -4px;
+      left: 0;
+      transition: width 0.3s;
+    }
+    .navbar ul li a:hover::after {
+      width: 100%;
+    }
+
+/* ========== Hero ========== */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image/01.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 24px;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  padding: 14px 28px;
+  font-size: 18px;
+  background: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #e91e63;
+}
+
+/* ========== Sections ========== */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+
+/* Section Base */
+.section {
+  padding: 80px 20px;
+}
+
+.section-light {
+  background-color: #f7f7f7;
+  color: #111;
+}
+
+.section-dark {
+  background-color: #111;
+  color: #fff;
+}
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ========== News Cards ========== */
+.new-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px; /* 稍微拉開間距 */
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.feature-card {
+  background: #1e1e1e;
+  color: #eee;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 320px; /* ✅ 加寬卡片原本280 → 改320 */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card img {
+  width: 100%;
+  height: 180px; /* ⬆️ 可以稍微提高圖片高度，讓比例更均衡 */
+  object-fit: cover;
+}
+
+.feature-card .info {
+  padding: 18px;
+}
+
+.feature-card h3 {
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+.feature-card .meta {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+
+.feature-card .meta a {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.feature-card .meta a:hover {
+  text-decoration: underline;
+  color: #ff4081;
+}
+.meta i {
+  margin-right: 8px;
+  color: #ff4081;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.countdown {
+  color: #ffb3c6;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+
+
+
+.event-table {
+  width: 1000px;
+  margin: 30px auto 0;
+  border-collapse: collapse;
+  background-color: #1c1c1c;
+  color: #ddd;
+  font-size: 20px;
+}
+
+
+.event-table th,
+.event-table td {
+  padding: 14px 10px;
+  border-bottom: 1px solid #444;
+  text-align: center;
+}
+
+.event-table th {
+  background-color: #333;
+  color: #fff;
+  font-weight: 600;
+}
+
+.event-table tr:hover {
+  background-color: #2a2a2a;
+  transition: background-color 0.2s ease;
+}
+
+.event-table td a {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+.event-table td a:hover {
+  text-decoration: underline;
+}
+
+.event-table td {
+  padding: 10px;
+}
+
+.event-table td a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* === 外層區塊：圖文並排 + 分隔線 === */
+.event-highlight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 20px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #444;
+}
+
+.event-highlight:last-child {
+  border-bottom: none;
+}
+
+.event-highlight.reverse {
+  flex-direction: row-reverse;
+}
+
+.highlight-left,
+.highlight-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.slideshow {
+  width: 100%;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #222;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.highlight-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.highlight-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.highlight-right {
+  text-align: left;
+  padding: 0 20px;
+  line-height: 1.8;
+}
+
+.event-highlight.reverse .highlight-right {
+  text-align: right;
+}
+
+.highlight-right h4 {
+  color: #ff4081;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.highlight-right h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.highlight-right p {
+  font-size: 16px;
+  margin-bottom: 14px;
+  color: #ccc;
+}
+
+
+.slideshow {
+  width: 100%;
+  height: 420px; /* 🔸 增加圖片高度 */
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.5);
+}
+
+.highlight-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+
+.highlight-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+/* ========== CTA Section ========== */
+/* 提交活動段落加強排版 */
+.section-dark p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #ccc;
+  text-align: center;
+}
+
+.section-dark p strong {
+  color: #ff4081;
+}
+
+/* CTA 按鈕強調 */
+.cta-btn {
+  background-color: #ff4081;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.cta-btn:hover {
+  background-color: #e91e63;
+  transform: translateY(-2px);
+}
+
+/* pulse 動畫效果 */
+.pulse {
+  animation: pulseAnim 1.5s infinite;
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: #414141;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* ========== Back To Top Button ========== */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+

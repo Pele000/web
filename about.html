@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Street Dance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- 導覽列 -->
+    <header class="navbar">
+      <div class="logo">StreetDance</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="teaching.html">Resources</a></li>
+          <li><a href="community.html">Community</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- Hero 區 -->
+      <section class="hero">
+        <h1>About Street Dance</h1>
+        <p>Explore the roots, styles, and soul of street dance culture</p>
+      </section>
+
+      <!-- Timeline Section -->
+        <section class="timeline-diagram section-dark fade-in">
+          <h2 class="section-title"><i class='bx bx-time'></i> Street Dance Timeline</h2>
+          <div class="timeline-container">
+            <div class="timeline-group top">
+              <div class="timeline-item">
+                <div class="timeline-badge">1970s</div>
+                <p>Breaking emerged in New York, blending martial arts and music.</p>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-group bottom">
+              <div class="timeline-dot"></div>
+              <div class="timeline-item">
+                <div class="timeline-badge">1980s</div>
+                <p>Street dance hit the mainstream via MTV and movies.</p>
+              </div>
+            </div>
+            <div class="timeline-group top">
+              <div class="timeline-item">
+                <div class="timeline-badge">2000s</div>
+                <p>Competitions and global culture professionalized the scene.</p>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-group bottom">
+              <div class="timeline-dot"></div>
+              <div class="timeline-item">
+                <div class="timeline-badge">2020+</div>
+                <p>Street dance is now in the Olympics and continues to evolve.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <!-- Explore Dance Styles -->
+      <section class="section-dark fade-in">
+        <h2 class="section-title"><i class='bx bx-headphone'></i> Explore Dance Styles</h2>
+        <div class="style-tabs">
+          <button class="tab-btn active" data-target="hiphop">Hip-Hop</button>
+          <button class="tab-btn" data-target="jazz">Jazz</button>
+          <button class="tab-btn" data-target="locking">Locking</button>
+          <button class="tab-btn" data-target="popping">Popping</button>
+          <button class="tab-btn" data-target="breaking">Breaking</button>
+        </div>
+        <div class="tab-content-wrapper">
+          <div class="tab-content active" id="hiphop">
+            <video controls src="videos/hiphop.mp4"></video>
+              <p>
+                Hip-Hop dance emphasizes bounce, rhythm, and freestyle expression. It is deeply connected to the music and culture, encouraging individuality, improvisation, and connection with the crowd.<br>
+                <span class="style-note">🎤 Representatives：Les Twins｜🎶 Genre:Old School / Boom Bap / Trap</span>
+              </p>
+          </div>
+          <div class="tab-content" id="jazz">
+            <video controls src="videos/jazz.mp4"></video>
+              <p>
+                Jazz dance blends classical technique with theatrical flair and powerful street energy. Often performed on stage, it incorporates sharp lines, expressive hands, and dynamic group formations.<br>
+                <span class="style-note">💃 Representatives：Mia Michaels｜🎶 Genre:Jazz Funk / Musical / Pop</span>
+              </p>
+          </div>
+          <div class="tab-content" id="locking">
+            <video controls src="videos/l.mp4"></video>
+              <p>
+                Locking is a playful and energetic dance style that features exaggerated movements, sharp arm freezes, and comic character. Dancers often smile and interact with the audience while grooving to funky beats.<br>
+              <span class="style-note">🕺 Representatives：Don Campbell｜🎶 Genre:Funk / Soul / James Brown</span>
+              </p>
+          </div>
+          <div class="tab-content" id="popping">
+            <video controls src="videos/p.mp4"></video>
+              <p>
+                Popping involves quick muscle contractions called "hits" that create a robotic or wave-like visual effect. It’s precise, rhythmic, and often combined with tutting, waving, and animation for added flair.<br>
+                <span class="style-note">🤖 Representatives：Popin' Pete｜🎶 Genre:Electro Funk / Boogie / Bass Music</span>
+              </p>
+          </div>
+          <div class="tab-content" id="breaking">
+            <video controls src="videos/b.mp4"></video>
+            <p>
+              Breaking (or B-boying) combines power moves, freezes, and intricate footwork. It’s highly acrobatic and rooted in street battle culture, emphasizing strength, creativity, and control.<br>
+              <span class="style-note">🔥 Representatives：Crazy Legs｜🎶 Genre:Breakbeats</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- The Spirit of Street Dance -->
+      <section class="section-dark fade-in section-divider">
+        <h2 class="section-title"><i class='bx bx-star'></i> The Spirit of Street Dance</h2>
+        <div class="spirit">
+          <div class="spirit-card">
+            <h3><i class="bx bx-wind"></i> Freedom</h3>
+            <p>Dance any style, any way you feel.</p>
+          </div>
+          <div class="spirit-card">
+            <h3><i class="bx bx-paint"></i> Creativity</h3>
+            <p>Every step is your own unique creation.</p>
+          </div>
+          <div class="spirit-card">
+            <h3><i class="bx bx-message-rounded-dots"></i> Expression</h3>
+            <p>Show your story through every movement.</p>
+          </div>
+          <div class="spirit-card">
+            <h3><i class="bx bx-group"></i> Community</h3>
+            <p>Connect and grow with fellow dancers.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 新手導引 -->
+      <section class="section-dark fade-in section-divider">
+        <h2 class="section-title"><i class='bx bx-rocket'></i> How to Start?</h2>
+        <div class="start-steps">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h4>Pick music you vibe with</h4>
+            <p>Start with tracks that spark your interest and make you move.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h4>Try beginner tutorials</h4>
+            <p>Watch and imitate to understand basic movements.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h4>Practice daily</h4>
+            <p>10 minutes a day builds groove and control over time.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h4>Share & join the crew</h4>
+            <p>Post clips, join sessions, and dance with others!</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 回頂按鈕 -->
+    <button id="backToTop">↑</button>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Street Dance Culture Platform</p>
+    </footer>
+  </div>
+
+  <script>
+    const backToTopBtn = document.getElementById('backToTop');
+    window.onscroll = () => {
+      const scrolled = window.scrollY > 200;
+      document.querySelector('.navbar').classList.toggle('scrolled', scrolled);
+      backToTopBtn.style.display = scrolled ? 'block' : 'none';
+    };
+    backToTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const targets = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.3 });
+      targets.forEach(target => observer.observe(target));
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      const targets = document.querySelectorAll('.fade-left');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.3 });
+      targets.forEach(target => observer.observe(target));
+    });
+
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // 取消所有 active
+        tabButtons.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+
+        // 加上目前點選的
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.target).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
