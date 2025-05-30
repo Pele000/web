@@ -337,7 +337,10 @@ li {
 }
 
 .message-form button:hover {
-  background-color: #81d4fa;
+  background-color: #fff;
+  color: #ff4081;
+  box-shadow: 0 0 25px rgba(255, 64, 129, 0.8);
+  transform: translateY(-2px);
 }
 
 .message-box {
@@ -353,6 +356,27 @@ li {
 
 .message-box hr {
   border: 0.5px solid #444;
+}
+
+.btn-style {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-style:hover {
+  background-color: #fff;
+  color: #ff4081;
+  box-shadow: 0 0 25px rgba(255, 64, 129, 0.8);
+  transform: translateY(-2px);
 }
 /* Q&A 區 */
 .qa-list {
