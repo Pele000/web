@@ -437,7 +437,9 @@ li {
 }
 
 .cta-btn:hover {
-  background-color: #e91e63;
+  background-color: #fff;
+  color: #ff4081;
+  box-shadow: 0 0 25px rgba(255, 64, 129, 0.8);
   transform: translateY(-2px);
 }
 
